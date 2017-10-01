@@ -45,6 +45,7 @@
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
     // Map is like a factory where you put in the raw materials and from there you can select what you want as an output
+    // Map is always giving back the same amount of elements (length) as given
     const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
 
     console.log(fullName);
@@ -52,6 +53,7 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    // +1 and -1 moving up and down people in the object based on the sorting criteria
     const ordered = inventors.sort(function(firstPerson, lastPerson){
         if (firstPerson.year > lastPerson.year) {
             return 1;
@@ -123,7 +125,7 @@
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
     const transporation = data.reduce(function(obj, item){
-        if(!obj[item) {
+        if(!obj[item] { // At first we need to check the existence of the item, so it can create a key for it in the object
             obj[item] = 0;
         }
         obj[item] ++;
